@@ -15,7 +15,7 @@ import paytmchecksum
 from captcha.image import ImageCaptcha
 import string
 BAS,DAD,FI,FA,FS,FB,FC,BAG,HAM,AB,HA,HB= range(12)
-TOKEN = "1486301742:AAFVT-UxjwuJONMKDK7rAtC9nwVRPafBVUI"
+TOKEN = "1809707932:AAFaS36lNWT1esuciasI2Uo6AQhUqf_Ypvg"
 refr = [0.1]
 dci=[0.1]
 wmin=[1.0]
@@ -31,7 +31,7 @@ def start(update, context):
     user = str(update.effective_user.id)
     data = json.load(open('users.json','r'))
     if update.message.chat.type == 'private':
-        if user=="820087402":
+        if user=="1095232231":
             reply_markup = ReplyKeyboardMarkup(admin_key,resize_keyboard=True)
             update.message.reply_text("Welcome to Admin Dashboard",reply_markup=reply_markup)
             return DAD
@@ -210,7 +210,7 @@ def bas(update, context):
     elif c=="👫 Refer And Earn":
         reply_markup = ReplyKeyboardMarkup(dash_key,resize_keyboard=True)
         user = str(update.effective_user.id)
-        msg = 'https://t.me/Cashwala_bot?start={}'.format(data['id'][user])
+        msg = 'https://t.me/Jio_digital_bot?start={}'.format(data['id'][user])
         update.message.reply_text("🙋‍♂ Hello\n\n""Here u will get ur Referral Link which u can share to Your Friends and start Earning Unlimited Paytm cash\n\n""Link - {}".format(msg),reply_markup=reply_markup)
         return BAS
     elif c=="📘 Daily Quiz":
